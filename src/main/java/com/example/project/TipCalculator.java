@@ -20,13 +20,13 @@ public class TipCalculator {
 
 
         result.append("-------------------------------\n");
-        result.append("Total bill before tip: " + "$" + String.format("%.2f", cost) + "\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
+        result.append("Total bill before tip: $" + String.format("%.2f", cost) + "\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
         result.append("Total percentage: " + percent + "%" + "\n");
-        result.append("Total tip: " + "$" + String.format("%.2f", tip) + "\n");
-        result.append("Total Bill with tip: " + " $" + String.format("%.2f", totalCost) + "\n");
-        result.append("Per person cost before tip: " + "$" + String.format("%.2f", costPerPerson) + "\n");
-        result.append("Tip per person: " + "$" + String.format("%.2f", tipPerPerson) + "\n");
-        result.append("Total cost per person: " + "$" + String.format("%.2f", totalPersonCost) + "\n");
+        result.append("Total tip: $" + String.format("%.2f", tip) + "\n");
+        result.append("Total Bill with tip: $" + String.format("%.2f", totalCost) + "\n");
+        result.append("Per person cost before tip: $" + String.format("%.2f", costPerPerson) + "\n");
+        result.append("Tip per person: $" + String.format("%.2f", tipPerPerson) + "\n");
+        result.append("Total cost per person: $" + String.format("%.2f", totalPersonCost) + "\n");
         result.append("-------------------------------\n");
 
 
