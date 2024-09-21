@@ -29,6 +29,7 @@ public class TipCalculator {
         result.append("Total cost per person: $" + String.format("%.2f", totalPersonCost) + "\n");
         result.append("-------------------------------\n");
 
+        // I learned how to round with String.format from here: https://www.w3schools.com/java/ref_string_format.asp
 
         return result.toString();
     }
