@@ -8,24 +8,25 @@ public class TipCalculator {
         //your code here
                 
         
-        double tip = Math.round(cost * ((double) percent * 0.01)) * 100.0 / 100.0;
+        double tip = cost * (percent / 100.0);
         
-        double totalCost = (tip + cost);
+        double totalCost = cost + tip;
 
         double costPerPerson = (cost / people);
         
-        double tipPerPerson = (costPerPerson * percent);
+        double tipPerPerson = tip / people;
+
         double totalPersonCost = (tipPerPerson + costPerPerson);
 
 
         result.append("-------------------------------\n");
-        result.append("Total bill before tip: " + " $" + cost); //concatenate to this string. DO NOT ERASE AND REWRITE
-        result.append("Total percentage: " + percent + "%");
-        result.append("Total tip: " + " $" + tip);
-        result.append("Total Bill with tip: " + " $" + totalCost);
-        result.append("Per person cost before tip: " + " $" + costPerPerson);
-        result.append("Tip per person: " + " $" + tipPerPerson);
-        result.append("Total cost per person: " + " $" + totalPersonCost);
+        result.append("Total bill before tip: " + "$" + String.format("%.2f", cost) + "\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
+        result.append("Total percentage: " + percent + "%" + "\n");
+        result.append("Total tip: " + "$" + String.format("%.2f", tip) + "\n");
+        result.append("Total Bill with tip: " + " $" + String.format("%.2f", totalCost) + "\n");
+        result.append("Per person cost before tip: " + "$" + String.format("%.2f", costPerPerson) + "\n");
+        result.append("Tip per person: " + "$" + String.format("%.2f", tipPerPerson) + "\n");
+        result.append("Total cost per person: " + "$" + String.format("%.2f", totalPersonCost) + "\n");
         result.append("-------------------------------\n");
 
 
@@ -34,9 +35,9 @@ public class TipCalculator {
      //TEST YOUR PROGRAM IN main
      public static void main(String[] args) {
         //try different values for people, percent, and cost to test your program before running test cases
-        int people = 6;
-        int percent = 25;
-        double cost = 52.27;
+        int people = 2;
+        int percent = 5;
+        double cost = 29.56;
         System.out.println(calculateTip(people,percent,cost));
     }
 }
