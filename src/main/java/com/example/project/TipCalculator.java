@@ -7,18 +7,14 @@ public class TipCalculator {
         StringBuilder result = new StringBuilder();
         //your code here
                 
-        
-        double tip = cost * (percent / 100.0);
-        
-        double totalCost = cost + tip;
+        //Calculating the tip, total cost, cost per person, tip per person, and the total cost per person
+        double tip = cost * (percent / 100.0); //Calculates tip by multiplying cost by the decimal version of percent
+        double totalCost = cost + tip; // Calculates total cost by adding cost and tip
+        double costPerPerson = (cost / people); // Calculates cost per person by dividing cost by the number of people there are
+        double tipPerPerson = tip / people; // Calculates tip per person by dividing the amount of tip by the number of people there are
+        double totalPersonCost = (tipPerPerson + costPerPerson); // Calculates the total cost per person by adding the tip per person and the cost per person
 
-        double costPerPerson = (cost / people);
-        
-        double tipPerPerson = tip / people;
-
-        double totalPersonCost = (tipPerPerson + costPerPerson);
-
-
+        //Printing the results of the calculations and rounding them by using String.format, which cuts off the decimals at the second place value, hence the "%.2f"
         result.append("-------------------------------\n");
         result.append("Total bill before tip: $" + String.format("%.2f", cost) + "\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
         result.append("Total percentage: " + percent + "%" + "\n");
